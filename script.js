@@ -11,7 +11,7 @@ form.addEventListener('submit', async (e) => {
   };
 
   try {
-    const response = await fetch('https://portfolio-backend-wzon.onrender.com', {
+    const response = await fetch('https://portfolio-backend-wzon.onrender.com/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
