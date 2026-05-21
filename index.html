@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nonu Portfolio</title>
+  <title>Nandini's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <script defer src="script.js"></script>
 </head>
+
 <body>
 
   <div class="bg-blur"></div>
 
   <nav>
-    <h1>NONU ✨</h1>
+    <h1>Nandini Singh</h1>
 
     <ul>
       <li><a href="#about">About</a></li>
@@ -23,57 +31,125 @@
   </nav>
 
   <header class="hero">
+    <img src="images/pfp.jpeg" alt="Profile Picture" class="pfp">
     <div class="hero-text">
       <h2>Hello, I'm</h2>
-      <h1>Nonu</h1>
+      <h1>Nandini Singh</h1>
       <p>
-        BCA Student • Future JavaScript Dev • Creative Coder
+      <p class="typing"></p>
       </p>
+      <div class="social-icons">
+
+  <a href="https://github.com/nandinisingh784" target="_blank">
+    <i class="fa-brands fa-github"></i>
+  </a>
+
+  <a href="www.linkedin.com/in/nandini-singh-no872005" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+
+  <a href="https://www.instagram.com/lilnonuu?igsh=dGM1a3hrZHNqNTZo" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+</div>
+<a href="resume.pdf" class="btn" target="_blank">
+  View Resume
+</a>
+
 
       <a href="#projects" class="btn">View Projects</a>
     </div>
   </header>
 
-  <section id="about" class="section glass">
+  <section id="about" class="section glass" data-aos="fade-up">
     <h2>About Me</h2>
 
     <p>
-      Hey! I'm Nonu — a computer science student who loves creating aesthetic
+      Hey! I'm Nandini — a computer science student who loves creating aesthetic
       websites, fun projects, and interactive experiences.
-      
+
       I enjoy frontend development, UI design, JavaScript, and building cool
       things on the internet.
     </p>
   </section>
 
-  <section id="skills" class="section">
+  <section id="skills" class="section" data-aos="fade-up">
     <h2>Skills</h2>
 
     <div class="skills-container">
-      <div class="skill-card">HTML</div>
-      <div class="skill-card">CSS</div>
-      <div class="skill-card">JavaScript</div>
-      <div class="skill-card">Node.js</div>
-      <div class="skill-card">Express.js</div>
-      <div class="skill-card">Git & GitHub</div>
-      <div class="skill-card">Responsive Design</div>
-      <div class="skill-card">UI/UX</div>
+      <div class="skill-card">
+        <i class="devicon-html5-plain-wordmark"></i>
+        <p>HTML</p>
+      </div>
+      <div class="skill-card">
+        <i class="devicon-css3-plain-wordmark"></i>
+        <p>CSS</p>
+      </div>
+      <div class="skill-card">
+
+        <i class="devicon-javascript-plain"></i>
+
+        <p>JavaScript</p>
+      </div>
+      <div class="skill-card">
+
+        <i class="devicon-nodejs-plain-wordmark"></i>
+
+        <P>Node.js</P>
+      </div>
+      <div class="skill-card">
+
+        <i class="devicon-express-original-wordmark"></i>
+
+        <p>Express.js</p>
+      </div>
+      <div class="skill-card">
+
+        <i class="devicon-github-original-wordmark"></i>
+
+        <p>Github</p>
+      </div>
+      <div class="skill-card">
+
+        <i class="devicon-c-original"></i>
+
+        <p>C</p>
+      </div>
+      <div class="skill-card">
+
+        <i class="devicon-cplusplus-plain"></i>
+
+        <p>C++</p>
+      </div>
+      <div class="skill-card">
+
+        <i class="devicon-git-plain-wordmark"></i>
+
+        <p>Git</p>
+      </div>
     </div>
   </section>
 
-  <section id="projects" class="section">
+  <section id="projects" class="section" data-aos="fade-up">
     <h2>Projects</h2>
 
     <div class="projects-grid">
 
       <div class="project-card">
-        <h3>Gaslight Detector</h3>
+        <img src="images/internsip-tracker.png" class="project-img">
+        <h3>Internship-tracker</h3>
         <p>
-          A fun interactive website that detects whether someone is gaslighting you.
+        <p>
+          A full-stack internship tracking platform that helps students organize applications, monitor application
+          status, manage deadlines, and track internship progress efficiently through a clean and user-friendly
+          interface.
+        </p>
         </p>
       </div>
 
       <div class="project-card">
+        <img src="images/portfolio-web.png" class="project-img">
         <h3>Portfolio Website</h3>
         <p>
           A modern responsive portfolio with animations and backend support.
@@ -81,16 +157,20 @@
       </div>
 
       <div class="project-card">
-        <h3>JavaScript Mini Apps</h3>
+        <img src="images/cinechill.png" class="project-img">
+        <h3>CineChill</h3>
         <p>
-          Collection of fun JavaScript projects and UI experiments.
+        <p>
+          CineChill is a modern movie discovery website where users can explore trending films, browse detailed movie
+          information, and enjoy a clean cinematic interface designed for an engaging entertainment experience.
+        </p>
         </p>
       </div>
 
     </div>
   </section>
 
-  <section id="contact" class="section glass">
+  <section id="contact" class="section glass" data-aos="fade-up">
     <h2>Contact</h2>
 
     <form id="contactForm">
@@ -107,8 +187,18 @@
   </section>
 
   <footer>
-    <p>Made with ☕ + chaos + JavaScript</p>
+    <p>Turning ideas into interactive experiences</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
 </body>
+
 </html>
