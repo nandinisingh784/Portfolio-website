@@ -1,3 +1,4 @@
+console.log("JS WORKING");
 const form = document.getElementById('contactForm');
 const responseMsg = document.getElementById('responseMsg');
 
