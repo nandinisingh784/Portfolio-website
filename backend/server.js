@@ -26,7 +26,9 @@ app.post('/contact', async (req, res) => {
 
     const { name, email, message } = req.body;
 
+    console.log("FORM HIT");
     console.log(req.body);
+
     res.json({
       message: 'Message sent successfully ✨'
     });
