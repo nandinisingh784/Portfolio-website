@@ -26,19 +26,7 @@ app.post('/contact', async (req, res) => {
 
     const { name, email, message } = req.body;
 
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
-      subject: 'New Portfolio Message',
-      text: `
-Name: ${name}
-Email: ${email}
-
-Message:
-${message}
-      `
-    });
-
+    console.log(req.body);
     res.json({
       message: 'Message sent successfully ✨'
     });
