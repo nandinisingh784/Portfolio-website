@@ -19,43 +19,36 @@ app.use(express.json());
 
 app.post('/contact', async (req, res) => {
 
-  const { name, email, message } = req.body;
+  try {
 
-await transporter.sendMail({
-  from: process.env.EMAIL_USER,
-  to: process.env.EMAIL_USER,
-  subject: 'New Portfolio Message',
-  text: `
+    const { name, email, message } = req.body;
+
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER,
+      subject: 'New Portfolio Message',
+      text: `
 Name: ${name}
 Email: ${email}
 
 Message:
 ${message}
-`
-});
+      `
+    });
 
-  const newMessage = {
-    name,
-    email,
-    message,
-    date: new Date()
-  };
+    res.json({
+      message: 'Message sent successfully ✨'
+    });
 
-  let messages = [];
+  } catch (error) {
 
-  try {
-    messages = await fs.readJson('messages.json');
-  } catch {
-    messages = [];
+    console.log(error);
+
+    res.status(500).json({
+      message: 'Something broke bestie 💀'
+    });
+
   }
-
-  messages.push(newMessage);
-
-  await fs.writeJson('messages.json', messages, { spaces: 2 });
-
-  res.json({
-    message: 'Message sent successfully ✨'
-  });
 
 });
 
